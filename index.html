@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor on Image</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Left: Image Section -->
+      <div class="image-section">
+        <button class="nav-btn" id="prevImageBtn" aria-label="Previous Image">
+          &lt;
+        </button>
+        <div class="image-wrapper active">
+          <img src="image1.jpg" alt="Image 1" />
+          <div class="text-layer" aria-label="Editable text layer"></div>
+        </div>
+        <div class="image-wrapper">
+          <img src="image2.jpg" alt="Image 2" />
+          <div class="text-layer" aria-label="Editable text layer"></div>
+        </div>
+        <div class="image-wrapper">
+          <img src="image3.jpg" alt="Image 3" />
+          <div class="text-layer" aria-label="Editable text layer"></div>
+        </div>
+        <button class="nav-btn" id="nextImageBtn" aria-label="Next Image">
+          &gt;
+        </button>
+      </div>
+
+      <!-- Right: Toolbar -->
+      <div class="toolbar">
+        <h2>Text Options</h2>
+        <button
+          id="addTextBtn"
+          style="background-color: rgb(0, 255, 0); color: white"
+        >
+          Add Text
+        </button>
+        <label for="fontSize">
+          Font Size:
+          <input type="number" id="fontSize" value="16" min="8" max="72" />
+        </label>
+        <label for="textColor">
+          Color:
+          <input type="color" id="textColor" value="#000000" />
+        </label>
+        <label for="fontStyle">
+          Font Style:
+          <select id="fontStyle">
+            <option value="normal">Normal</option>
+            <option value="bold">Bold</option>
+            <option value="italic">Italic</option>
+            <option value="underline">Underline</option>
+          </select>
+        </label>
+        <label for="textAlignment">
+          Text Alignment:
+          <select id="textAlignment">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+          </select>
+        </label>
+        <label for="fontFamily">
+          Font Family:
+          <select id="fontFamily">
+            <option value="Arial" selected>Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Poppins">Poppins</option>
+          </select>
+        </label>
+        <button
+          id="deleteTextBtn"
+          style="background-color: rgb(255, 0, 0); color: white"
+        >
+          Delete Selected Text
+        </button>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Created by Tushar Sanisare |
+        <a href="mailto:tsanisare@gmail.com">tsanisare@gmail.com</a>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

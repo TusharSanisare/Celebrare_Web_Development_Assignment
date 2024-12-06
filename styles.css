@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+   
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  background-color: #fafafa;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left: Image Section */
+.image-section {
+  position: relative;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  display: none;
+  position: relative;
+  width: auto;
+  height: 90%;
+  max-height: 90%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  background-color: #000;  
+}
+
+.image-wrapper.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  aspect-ratio: 9 / 16;
+}
+
+.text-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;  
+}
+
+.text-box {
+  position: absolute;
+  cursor: move;
+  font-size: 16px;
+  pointer-events: auto;
+  color: black;
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  z-index: 5;  
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #555; /* Slight hover effect */
+}
+
+#prevImageBtn {
+  left: 10px;
+}
+
+#nextImageBtn {
+  right: 10px;
+}
+
+/* Right: Toolbar */
+.toolbar {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.toolbar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.toolbar button,
+.toolbar input,
+.toolbar select {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333333;
+  transition: background-color 0.3s ease;
+}
+
+.toolbar button:hover,
+.toolbar input:hover,
+.toolbar select:hover {
+  background-color: #f0f0f0;
+}
+
+.toolbar label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+ 
+.toolbar input[type="number"],
+.toolbar input[type="color"],
+.toolbar select {
+  width: 60%;  
+  margin-bottom: 10px;
+}
+ 
+.toolbar button {
+  width: 100%; 
+  cursor: pointer;
+}
+
+/* Active state for image wrappers */
+.image-wrapper.active {
+  display: block;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ddd;
+}
